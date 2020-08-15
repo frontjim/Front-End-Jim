@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="checkbox.css" />
+    <script src="myScript.js"></script>
+  </head>
+  <body class="preload">
+    <!--sometimes the CSS transitions for font-size, 
+      border-color, and color animate on page load-->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        let node = document.querySelector(".preload");
+        node.classList.remove("preload");
+      });
+    </script>
+    <!--here we use preload class to prevent transitions. When page is
+    loaded we remove preload class-->
+    <div>
+      <label class="container">
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  </body>
+</html>
